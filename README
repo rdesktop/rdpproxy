@@ -1,0 +1,44 @@
+=======================================
+rdpproxy: Man-in-the-middle RDP sniffer
+	Matt Chapman <matthewc@cse.unsw.edu.au>
+	Modified by Erik Forsberg <forsberg at cendio dot se>
+
+
+NOTE: This is a tool for developers, so it is a bit rough around the
+edges :)
+
+RDP4
+----
+Old Microsoft RDP4 clients should work "out of the box". Although with
+this version of rdpproxy, they don't. Umm.. don't know why.
+
+RDP5, Administration mode
+-------------------------
+You will need to replace tsprivkey.der with the private key from your
+Terminal Server.  To do this, dump its secrets with Todd Sabin's
+lsadump2 (sold separately).  Then pass the output of lsadump2 through
+extractkey.pl (just dumps that particular secret in binary) and finally
+rsa2der.
+
+RDP5, Application mode
+----------------------
+This works as it should as far as I can see. 
+
+
+=======================================
+pparser.py: Parser for turning rdpproxy output into readable form.
+	Erik Forsberg <forsberg at cendio dot se>
+	
+pparser.py can be used to get a more readable form of the packet trace
+output by rdpproxy. Just as rdpproxy, it's a developer tool, so it's
+usability may sometimes be.. uhm.. challenging :-).
+
+pparser.py can output several formats, but basically, only the TXT
+format is interesting unless you write a master thesis :-).
+
+pparser.py can sort out packets based on what channel they occur on,
+so it might very well be useful for developing support for new virtual
+channels such as sound and local drive redirection.
+
+In order to work, pparser.py expects ../keymaps to exist.
+
