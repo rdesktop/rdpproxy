@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+# -*-mode: python; coding: iso-8859-1 -*-
 
 import string
 import getopt
