@@ -73,7 +73,7 @@ void sec_encrypt(uint8 * data, int length);
 
 /* produce a hex dump */
 void
-hexdump(unsigned char *p, unsigned int len)
+hexdump(unsigned char *p, int len)
 {
 	unsigned char *line = p;
 	unsigned int thisline, offset = 0;
