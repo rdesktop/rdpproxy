@@ -15,7 +15,7 @@ from keymap import keymap
 keys = keymap("keymaps", 'sv')
 currentchannel = 0
 
-rdp_channel_flags = [(0x80000000, "OPTION_INITIALIZED"),
+rdp_channel_flags = [(0x80000000L, "OPTION_INITIALIZED"),
                      (1073741824, "OPTION_ENCRYPT_RDP"),
                      (536870912, "OPTION_ENCRYPT_SC"),
                      (268435456, "OPTION_ENCRYPT_CS"),
