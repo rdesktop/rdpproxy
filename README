@@ -40,5 +40,7 @@ pparser.py can sort out packets based on what channel they occur on,
 so it might very well be useful for developing support for new virtual
 channels such as sound and local drive redirection.
 
-In order to work, pparser.py expects ../keymaps to exist.
+In order to work, pparser.py expects the directory keymaps to exist in
+the current directory. It makes most sense to create a symlink to the
+keymaps directory in the rdesktop source directory.
 
